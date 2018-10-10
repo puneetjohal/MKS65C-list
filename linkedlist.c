@@ -33,7 +33,6 @@ struct node* free_list(struct node* pointer){
 //testing
 int main(){
   struct node *p = (struct node*)malloc(10*sizeof(struct node)); //allocates memory for 10 nodes
-  p->i = ()
   struct node head = {0, NULL};
   p = &head;
   p = insert_front(p, 1);
