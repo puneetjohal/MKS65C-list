@@ -23,13 +23,12 @@ struct node* insert_front(struct node* pointer, int i){
 //goes through each node in the list and frees memory
 //returns pointer to the beginning of the list (NULL)
 struct node* free_list(struct node* pointer){
-  struct node* nextnode;
-  while (pointer->next){
-    nextnode = pointer->next;
-    free(pointer);
-    pointer = nextnode;
+  struct node* toBeFreed;
+  while (pointer != NULL){
+    toBeFreed = pointer;
+    pointer = pointer->next;
+    free(toBeFreed);
   }
-  free(pointer);
   return pointer;
 }
 
