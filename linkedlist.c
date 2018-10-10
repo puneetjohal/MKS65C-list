@@ -47,6 +47,6 @@ int main(){
   print_list(p);
   printf("Freeing memory...\n");
   p = free_list(p);
-  print_list(p);
+  //print_list(p);
   return 0;
 }
