@@ -17,7 +17,7 @@ struct node* insert_front(struct node* pointer, int i){
   struct node newHead = {i, pointer};
   struct node* newHeadP = &newHead;
   return newHeadP;
-} //returns segmentation fault?
+} //returns segmentation fault???
 
 //goes through each node in the list and frees memory
 //returns pointer to the beginning of the list (NULL)
@@ -35,9 +35,11 @@ int main(){
   struct node *p = (struct node*)malloc(10*sizeof(struct node)); //allocates memory for 10 nodes
   struct node head = {0, NULL};
   p = &head;
-  p = insert_front(p, 1);
+  //p = insert_front(p, 1);
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
+  print_list(p);
+  free_list(p);
   print_list(p);
   printf("I work up to here\n");
   return 0;
