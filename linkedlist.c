@@ -3,7 +3,7 @@
 
 //takes a point to a node struct and prints all data in the list
 void print_list(struct node* pointer){
-  while (pointer->next){
+  while (pointer){
     printf("%d ", pointer->i);
     pointer = pointer->next;
   }
@@ -25,6 +25,6 @@ int main(){
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
   print_list(p);
-  printf("I work");
+  printf("I work up to here\n");
   return 0;
 }
