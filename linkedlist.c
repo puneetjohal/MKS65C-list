@@ -29,6 +29,7 @@ struct node* free_list(struct node* pointer){
     free(pointer);
     pointer = nextnode;
   }
+  return pointer;
 }
 
 //testing
@@ -38,12 +39,13 @@ int main(){
   p = &head;
   printf("Original: ");
   print_list(p);
+  printf("Inserting values... \n");
   p = insert_front(p, 1);
   p = insert_front(p, 2);
   p = insert_front(p, 3);
   print_list(p);
-  //free_list(p);
-  //print_list(p);
-  printf("I work up to here\n");
+  printf("Freeing memory...\n");
+  p = free_list(p);
+  print_list(p);
   return 0;
 }
