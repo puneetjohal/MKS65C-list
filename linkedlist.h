@@ -3,9 +3,6 @@
 //prototype
 struct node {int i; struct node* next};
 
-//constructs node
-struct node construct();
-
 //takes a point to a node struct and prints all data in the list
 void print_list(struct node* pointer);
 
