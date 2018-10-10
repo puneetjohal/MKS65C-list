@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //prototype
-struct node {int i; struct node* next};
+struct node {int i; struct node* next;};
 
 //takes a point to a node struct and prints all data in the list
 void print_list(struct node* pointer);

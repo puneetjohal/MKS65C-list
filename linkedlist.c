@@ -12,9 +12,9 @@ void print_list(struct node* pointer){
 //creates new node and adds it to the beginning of the list
 //returns pointer to the beginning of the list
 struct node* insert_front(struct node* pointer, int i){
-  struct node newHead = {int, pointer};
+  struct node newHead = {i, pointer};
   struct node* newHeadP = &newHead;
-  return newHeapP;
+  return newHeadP;
 }
 
 //testing
