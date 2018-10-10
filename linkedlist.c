@@ -24,11 +24,12 @@ struct node* insert_front(struct node* pointer, int i){
 //returns pointer to the beginning of the list (NULL)
 struct node* free_list(struct node* pointer){
   struct node* nextnode;
-  while (pointer){
+  while (pointer->next){
     nextnode = pointer->next;
     free(pointer);
     pointer = nextnode;
   }
+  free(pointer);
   return pointer;
 }
 
