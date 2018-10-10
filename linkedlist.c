@@ -36,9 +36,11 @@ int main(){
   struct node *p = (struct node*)malloc(sizeof(struct node)); //allocates memory
   struct node head = {0, NULL};
   p = &head;
+  printf("Original: ");
+  print_list(p);
   p = insert_front(p, 1);
-  //p = insert_front(p, 2);
-  //p = insert_front(p, 3);
+  p = insert_front(p, 2);
+  p = insert_front(p, 3);
   print_list(p);
   //free_list(p);
   //print_list(p);
