@@ -14,10 +14,11 @@ void print_list(struct node* pointer){
 //creates new node and adds it to the beginning of the list
 //returns pointer to the beginning of the list
 struct node* insert_front(struct node* pointer, int i){
+  struct node* newHeadP = (struct node*)malloc(sizeof(struct node));
   struct node newHead = {i, pointer};
-  struct node* newHeadP = &newHead;
+  newHeadP = &newHead;
   return newHeadP;
-} //returns segmentation fault???
+}
 
 //goes through each node in the list and frees memory
 //returns pointer to the beginning of the list (NULL)
@@ -32,10 +33,10 @@ struct node* free_list(struct node* pointer){
 
 //testing
 int main(){
-  struct node *p = (struct node*)malloc(10*sizeof(struct node)); //allocates memory for 10 nodes
+  struct node *p = (struct node*)malloc(sizeof(struct node)); //allocates memory
   struct node head = {0, NULL};
   p = &head;
-  //p = insert_front(p, 1);
+  p = insert_front(p, 1);
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
   print_list(p);
