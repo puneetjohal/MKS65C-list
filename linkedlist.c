@@ -14,10 +14,10 @@ void print_list(struct node* pointer){
 //creates new node and adds it to the beginning of the list
 //returns pointer to the beginning of the list
 struct node* insert_front(struct node* pointer, int i){
-  struct node* newHeadP = (struct node*)malloc(sizeof(struct node));
-  struct node newHead = {i, pointer};
-  newHeadP = &newHead;
-  return newHeadP;
+  struct node* newHead = (struct node*)malloc(sizeof(struct node));
+  newHead->i = i;
+  newHead->next = pointer;
+  return newHead;
 }
 
 //goes through each node in the list and frees memory
