@@ -7,6 +7,7 @@ void print_list(struct node* pointer){
     printf("%d ", pointer->i);
     pointer = pointer->next;
   }
+  printf("\n");
 }
 
 //creates new node and adds it to the beginning of the list
@@ -21,7 +22,7 @@ struct node* insert_front(struct node* pointer, int i){
 int main(){
   struct node head = {0, NULL};
   struct node* p = &head;
-  //p = insert_front(p, 1);
+  p = insert_front(p, 1);
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
   print_list(p);
