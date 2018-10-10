@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "linkedlist.h"
 
 //takes a point to a node struct and prints all data in the list
