@@ -4,11 +4,11 @@
 
 //takes a point to a node struct and prints all data in the list
 void print_list(struct node* pointer){
-  while (pointer){
+  while (pointer->next){
     printf("%d ", pointer->i);
     pointer = pointer->next;
   }
-  printf("\n");
+  printf("%d\n", pointer->i);
 }
 
 //creates new node and adds it to the beginning of the list
@@ -33,9 +33,10 @@ struct node* free_list(struct node* pointer){
 //testing
 int main(){
   struct node *p = (struct node*)malloc(10*sizeof(struct node)); //allocates memory for 10 nodes
+  p->i = ()
   struct node head = {0, NULL};
   p = &head;
-  //p = insert_front(p, 1);
+  p = insert_front(p, 1);
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
   print_list(p);
