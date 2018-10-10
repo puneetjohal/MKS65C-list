@@ -25,5 +25,6 @@ int main(){
   //p = insert_front(p, 2);
   //p = insert_front(p, 3);
   print_list(p);
+  printf("I work");
   return 0;
 }
