@@ -37,7 +37,7 @@ struct node* free_list(struct node* pointer){
 //testing
 int main(){
   struct node *p = (struct node*)malloc(sizeof(struct node)); //allocates memory
-  p = &{1, NULL};
+  struct node head = {1, NULL};
   printf("Original: ");
   print_list(p);
   printf("Inserting values... \n");
