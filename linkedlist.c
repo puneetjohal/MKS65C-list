@@ -46,7 +46,7 @@ int main(){
   p = insert_front(p, 4);
   print_list(p);
   printf("Freeing memory... leads to a core dump?\n");
-  //p = free_list(p);
-  //print_list(p);
+  p = free_list(p);
+  print_list(p);
   return 0;
 }
