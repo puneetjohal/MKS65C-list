@@ -30,7 +30,7 @@ struct node* free_list(struct node* pointer){
     free(toBeFreed);
     toBeFreed = nextNode;
   }
-  toBeFreed = NULL;
+  toBeFreed = NULL; //making sure that the pointer returned doesn't point to garbage
   return toBeFreed;
 } //core dump???
 
@@ -45,7 +45,7 @@ int main(){
   p = insert_front(p, 3);
   p = insert_front(p, 4);
   print_list(p);
-  printf("Freeing memory... leads to a core dump?\n");
+  printf("Freeing memory...\n");
   p = free_list(p);
   print_list(p);
   return 0;
