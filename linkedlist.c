@@ -30,6 +30,7 @@ struct node* free_list(struct node* pointer){
     free(toBeFreed);
     toBeFreed = nextNode;
   }
+  toBeFreed = NULL;
   return toBeFreed;
 } //core dump???
 
